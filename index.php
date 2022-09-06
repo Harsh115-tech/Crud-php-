@@ -31,6 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <style>
+        *{
+            color: gray;
+            font-weight: bold;
+            font-family: cursive;
+            letter-spacing: 0.6px;
+        }
         .form-control:focus{
             box-shadow:none;
         }
@@ -39,6 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         .btn:focus{
             box-shadow:none !important;
+        }
+        .head_color{
+            color:black;
         }
     </style>
 </head>
@@ -68,16 +77,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="mb-4">
                     <h3 class="text-white text-center capitalize text-decoration-underline ">Datatable Data</h3>
                 </div>
-                <div class="table-responsive-md">
+                <div class="table-responsive-md rounded">
                     <table class="table table-primary">
                         <thead>
-                        <tr class="text-center">
-                            <th scope="col">Id</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Stream</th>
-                            <th scope="col">Action</th>
-                        </tr>
+                            <tr class="text-center text-dark pb-2">
+                                <th scope="col" class="head_color">Id</th>
+                                <th scope="col" class="head_color">First Name</th>
+                                <th scope="col" class="head_color">Last Name</th>
+                                <th scope="col" class="head_color">Stream</th>
+                                <th scope="col" class="head_color">Action</th>
+                            </tr>
                         </thead>
                         <tbody>
                         <!-- php start -->
