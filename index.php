@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: gray;
             font-weight: bold;
             font-family: cursive;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.7px;
         }
         .form-control:focus{
             box-shadow:none;
