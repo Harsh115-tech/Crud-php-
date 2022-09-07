@@ -52,7 +52,7 @@
     <div class="container">
         <div class="card bg-dark p-4 rounded update_cont mx-auto">
             <div class="card-body">
-                <form class="my-3 rounded border-white box-shadow mx-auto update_form" method="POST" action="update.php">
+                <form class="my-3 rounded border-white box-shadow mx-auto update_form" id="update_form" method="POST" action="update.php">
                     <input type="hidden" name="id" value="<?= $_id ?>">
                     <div class="mb-3"> 
                         <label for="fname" class="form-label text-light">First Name</label>
@@ -72,4 +72,46 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+<!-- <?php include_once './select.php'; ?> -->
+<script>
+   
+
+    $("#update_form").validate({
+        rules:{
+            fname: {
+                required: true,
+                minlength: 2,
+                notEqual: "#fname"
+            },
+            lname: {
+                required: true,
+                minlength:2,
+                notEqual: "#lname"
+            },
+            stream: {
+                required: true,
+                minlength:1,
+                notEqual: "#stream"
+            }
+
+        },messages:{
+            fname:{
+                required : "Please Enter Your First Name",
+                minlength : "Your Email Must Be At least 5 Characters Long"
+            },
+            lname:{
+                required : "Please Enter Your Last Name",
+                minlength : "Your password Must Be At least 5 Characters Long"
+            },
+            stream:{
+                required : "Please Enter Your Password",
+                minlength : "Your Password Must Be At least 5 Characters Long"
+            },
+        }   
+    });
+
+</script>
 </html>
