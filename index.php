@@ -49,6 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .head_color{
             color:black;
         }
+        .error{
+            color : red !important;
+            font-weight:  normal !important;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="row bg-dark">
             <h1 class="text-white d-inline bg-dark text-center border-bottom border-5 p-2"> <span class="me-2 fw-bold text-black bg-white rounded d-inline-flex align-items-center">¬_¬</span>Crud Operation (PHP)</h1>
             <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
-                <form class="w-75 my-3 rounded border-white box-shadow add_user_form" method="POST" action="index.php">
+                <form class="w-75 my-3 rounded border-white box-shadow add_user_form" id="add_user_form" method="POST" action="index.php">
                     <h3 class="text-white text-center capitalize text-decoration-underline">Add User</h3>
                     <div class="mb-3">
                         <label for="fname" class="form-label text-light">First Name</label>
